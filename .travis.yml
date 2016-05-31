@@ -24,4 +24,4 @@ android:
 
 sudo: false
 before_install:
-  - 'if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then openssl aes-256-cbc -K $encrypted_6a3fa2e8cfe5_key -iv $encrypted_6a3fa2e8cfe5_iv -in releases/google-play-key.p12.enc -out releases/google-play-key.p12 -d; fi'
+  - 'if [ "${TRAVIS_BRANCH}" = "master" ]; then openssl aes-256-cbc -K $encrypted_6a3fa2e8cfe5_key -iv $encrypted_6a3fa2e8cfe5_iv -in releases/google-play-key.p12.enc -out releases/google-play-key.p12 -d; fi'
